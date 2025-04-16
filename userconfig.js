@@ -12,7 +12,7 @@ const default_config = {
     iconColor: palette.maroon,
   },
   disabled: [],
-  fastlink: "https://www.startpage.com/en/",
+  fastlink: "https://gemini.google.com/app",
   openLastVisitedTab: true,
   tabs: [
     {
