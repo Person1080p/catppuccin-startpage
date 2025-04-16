@@ -41,7 +41,8 @@ class Clock extends Component {
 
   setTime() {
     const date = new Date();
-    this.refs.clock = date.strftime(CONFIG.clock.format);
+    // this.refs.clock = date.strftime(CONFIG.clock.format);
+    this.refs.clock = date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
   }
 
   connectedCallback() {
