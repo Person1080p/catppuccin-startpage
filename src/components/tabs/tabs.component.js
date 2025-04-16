@@ -84,11 +84,43 @@ class Tabs extends Component {
 
   style() {
     return `
+      .search-container {
+          position: absolute;
+          top: -85px;  
+          width: 100vw;  
+          padding: 15px;
+          display: flex;
+          justify-content: center;
+          z-index: 2;
+          left:10%;
+          transform: translateX(-50%);
+      }
+
+      .search-box {
+        width: 500%;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;  /* Increased border radius */
+        background: ${CONFIG.palette.base};
+        color: ${CONFIG.palette.text};
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+      }
+        
+      .search-box:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--flavour), 0 10px 20px rgba(0, 0, 0, .25);
+      }
+
       status-bar {
-          bottom: -70px;
+          position: absolute;
+          bottom: -55px;
+          width: 100%;
           height: 32px;
           background: ${CONFIG.palette.base};
-          border-radius: 4px;
+          border-radius: 10px;  /* Increased border radius */
           box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
       }
 
@@ -102,17 +134,20 @@ class Tabs extends Component {
       }
 
       #panels {
-          border-radius: 5px 0 0 5px;
+          border-radius: 20px;
           width: 90%;
           max-width: 1200px;
-          height: 450px;
-          right: 0;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
+          height: 60vh;
+          position: fixed;
+          left: 50%;
+          top: 55%;  /* Move down slightly */
+          transform: translate(-50%, 30%);  /* Adjust transform to move down */
+          margin: 0;
           box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
           background: ${CONFIG.palette.base};
+          display: flex;
+          flex-direction: column;
+          position: relative;
       }
 
       .categories {
@@ -120,7 +155,7 @@ class Tabs extends Component {
           height: 100%;
           overflow: hidden;
           position: relative;
-          border-radius: 10px 0 0 10px;
+          border-radius: 20px;
       }
 
       .categories ul {
@@ -286,8 +321,12 @@ class Tabs extends Component {
   template() {
     return `
       <div id="links" class="-">
-
         <div id="panels">
+        <div class="search-container">
+          <form action="https://duckduckgo.com/" method="get" target="_blank">
+            <input type="text" name="q" class="search-box" placeholder="Search DuckDuckGo..." autocomplete="off">
+          </form>
+        </div>
           <div class="categories">
             ${Category.getAll(this.tabs)}
           </div>
@@ -295,7 +334,7 @@ class Tabs extends Component {
         </div>
       </div>
     `;
-  }
+}
 
   connectedCallback() {
     this.render();
