@@ -26,7 +26,7 @@ class Links extends Component {
                 .map(
                   (link) => `
                   <div class="link-info">
-                    <a href="${link.url}" target="_blank">
+                    <a href="${link.url}">
                       ${Links.getIcon(link)}
                       ${link.name ? `<p class="link-name">${link.name}</p>` : ""}
                     </a>
@@ -323,7 +323,7 @@ class Tabs extends Component {
       <div id="links" class="-">
         <div id="panels">
         <div class="search-container">
-          <form action="https://duckduckgo.com/" method="get" target="_blank">
+          <form action="https://duckduckgo.com/" method="get">
             <input type="text" name="q" class="search-box" placeholder="Search DuckDuckGo..." autocomplete="off">
           </form>
         </div>
