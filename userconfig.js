@@ -40,6 +40,12 @@ const default_config = {
               icon: "drop-circle",
               icon_color: palette.blue,
             },
+            {
+              name: "Immich",
+              url: "http://192.168.0.243:30041/photos",
+              icon: "photo",
+              icon_color: palette.yellow,
+            },
           ],
         },
         {
