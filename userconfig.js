@@ -23,6 +23,12 @@ const default_config = {
           name: "Steaming",
           links: [
             {
+              name: "Youtube Music",
+              url: "https://music.youtube.com",
+              icon: "disc",
+              icon_color: palette.red,
+            },
+            {
               name: "Youtube",
               url: "https://www.youtube.com",
               icon: "brand-youtube",
