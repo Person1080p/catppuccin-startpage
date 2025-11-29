@@ -29,22 +29,10 @@ const default_config = {
               icon_color: palette.red,
             },
             {
-              name: "Youtube",
-              url: "https://www.youtube.com",
-              icon: "brand-youtube",
-              icon_color: palette.red,
-            },
-            {
               name: "Plex Local",
               url: "http://truenas.local:32400/web/index.html#!",
               icon: "chevron-right",
               icon_color: palette.yellow,
-            },
-            {
-              name: "qB Seed Box",
-              url: "http://seed.loc:8080/",
-              icon: "drop-circle",
-              icon_color: palette.blue,
             },
             {
               name: "Immich",
@@ -52,17 +40,29 @@ const default_config = {
               icon: "photo",
               icon_color: palette.yellow,
             },
+            {
+              name: "Youtube",
+              url: "https://www.youtube.com",
+              icon: "brand-youtube",
+              icon_color: palette.red,
+            },
           ],
         },
         {
           name: "utility",
           links: [
             {
-              name: "Email",
-              url: "http://truenas.local:31007/",
-              icon: "mail",
-              icon_color: palette.green,
+              name: "qB Seed Box",
+              url: "http://seed.loc:8080/",
+              icon: "drop-circle",
+              icon_color: palette.blue,
             },
+            // {
+            //   name: "Email",
+            //   url: "http://truenas.local:31007/",
+            //   icon: "mail",
+            //   icon_color: palette.green,
+            // },
             {
               name: "Calendar",
               url: "https://calendar.google.com",
@@ -97,6 +97,12 @@ const default_config = {
               url: "https://www.textnow.com/messaging",
               icon: "message-circle-down",
               icon_color: palette.pink,
+            },
+            {
+              name: "Discord",
+              url: "https://discord.com/channels/@me",
+              icon: "brand-discord",
+              icon_color: palette.purple,
             },
           ],
         },
