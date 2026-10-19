@@ -57,21 +57,21 @@ const default_config = {
               icon: "drop-circle",
               icon_color: palette.blue,
             },
-            // {
-            //   name: "Email",
-            //   url: "http://truenas.local:31007/",
-            //   icon: "mail",
-            //   icon_color: palette.green,
-            // },
+            {
+              name: "Email",
+              url: "http://truenas.local:3000/#/",
+              icon: "mail",
+              icon_color: palette.green,
+            },
             {
               name: "Calendar",
-              url: "https://calendar.google.com",
+              url: "http://truenas.local:3000/#/calendar",
               icon: "calendar-filled",
               icon_color: palette.peach,
             },
             {
               name: "JetKVM",
-              url: "http://192.168.0.190/",
+              url: "http://192.168.0.187/",
               icon: "circle-triangle",
               icon_color: palette.blue,
             },
@@ -80,15 +80,15 @@ const default_config = {
         {
           name: "Messaging",
           links: [
+            // {
+            //   name: "BlueBubbles",
+            //   url: "https://bluebubbles.app/web/#/",
+            //   icon: "message-dots",
+            //   icon_color: palette.blue,
+            // },
             {
-              name: "BlueBubbles",
-              url: "https://bluebubbles.app/web/#/",
-              icon: "message-dots",
-              icon_color: palette.blue,
-            },
-            {
-              name: "Google Messages",
-              url: "https://messages.google.com/web/conversations",
+              name: "iMessage",
+              url: "http://192.168.0.118:8642/#",
               icon: "message",
               icon_color: palette.green,
             },
